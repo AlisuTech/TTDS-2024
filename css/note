@@ -1,0 +1,23 @@
+CSS - CASCADING STYLE SHEET
+
+HOW DO WE WRITE CSS
+1. INLINE STYLING
+2. Style Tag or Element
+3. CSS File
+
+Styles
+Visual Appearance
+-- Font Experience
+
+Sizing In CSS - Pixels (px), Percent (%)
+
+Using Style Tag
+
+1. Element Based Styling
+2. Class Based Styling
+3. Id Based Styling
+
+
+Border Model/Box Model
+-- Outer Spacing - Margin
+-- Inner Spacing - Padding
