@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+</head>
+<style>
+    .div1{
+        background-color: red;
+        padding: 10px;
+        margin: 10px;
+        height: 200px;
+        width: 150px;
+    }
+    .div2{
+        background-color: blue;
+        margin: 5px;
+        padding: 20px;
+        width: 50%;
+        height: 20vh;
+    }
+    .div3{
+        background-color: pink;
+        /* max-width: 200px; */
+        min-width: 300px;
+        min-height: 200px;
+        max-height: 300px;
+        outline: 2px black solid;
+        border: 5px red solid;
+    }
+    /* Height % means vh */
+</style>
+<body>
+    <div class="div1">
+        <p>Hello World</p>
+    </div>
+    <div class="div2">
+        <p>Hello World 2</p>
+    </div>
+    <div class="div3">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias rem minima, necessitatibus illo consequatur, doloremque repellat provident magnam cumque quod quibusdam eos iste velit nulla molestiae. Voluptas sed nulla porro.</p>
+    </div>
+</body>
+</html>
