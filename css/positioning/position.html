@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positionining</title>
+</head>
+<style>
+    .div{
+        border: 3px red solid;
+        height: 96vh;
+        width:96%;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+</style>
+<body>
+    <div class="div">
+        
+        <div style="background-color: blue;border-radius: 50%;height: 30px;width: 30px;"></div>
+        <div  style="background-color: black;border-radius: 50%;height: 30px;width: 30px;"></div>
+    <!-- 
+        HTML Page - X,Y Coordinate
+        -X (outside) 0 (** Blue Ball) +X (inside) (Xmax - 100%) ** Black Ball
+        -Y (upwards outside) 0 (** Blue Ball) +Y (inside) (Ymax -100vh)
+        Top (Y),Left (X), Right (X), Bottom (Y)
+        Top - increases from origin downwards and decreases upward
+        Left - increases to right but reduces to left
+        Bottom - starts at the bottom origin, increases upwards but decreases downwards
+        Right - increases to the left, decreases to the right
+     -->
+    </div>
+</body>
+</html>

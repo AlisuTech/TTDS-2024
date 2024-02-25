@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+</head>
+<style>
+    .grid-layout{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        row-gap: 10px;
+        column-gap: 10px;
+        /* justify-content: space-between; */
+        /* align-items: stretch; */
+        background-color: lightgray;
+        height: 400px;
+    }
+    .grid-layout-two{
+      display: grid;  
+      grid-template-columns: 0.4fr 1fr;
+      height: 300px;
+    }
+    .child-comp{
+        background-color: black;
+        color:white;
+        font-size: 20px;
+    }
+    .move-one-to-seven{
+        grid-row-start: 2;
+        grid-column-start: 3;
+    }
+    .move-nine-to-eight{
+        grid-row-start: 2;
+        grid-column-start: 4;
+    }
+    .extend-one-to-two{
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-end: 3;
+    }
+    .extend-seven{
+        grid-row-start: 3;
+        grid-column-start: 2;
+        grid-row-end:5;
+        grid-column-end: 5;
+    }
+</style>
+<body>
+    <div class="grid-layout">
+        <div class="child-comp extend-one-to-two">1</div>
+        <div class="child-comp">2</div>
+        <div class="child-comp">3</div>
+        <div class="child-comp">4</div>
+        <div class="child-comp">5</div>
+        <div class="child-comp">6</div>
+        <div class="child-comp extend-seven">7</div>
+        <div class="child-comp">8</div>
+        <div class="child-comp">9</div>
+        <div class="child-comp">10</div>
+        <div class="child-comp">11</div>
+        <div class="child-comp">12</div>
+        <div class="child-comp">13</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="grid-layout-two">
+        <div class="child-comp">1</div>
+        <div class="child-comp" style="background-color: lightgray;color: black;">2</div>
+    </div>
+</body>
+</html>

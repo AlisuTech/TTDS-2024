@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Table</title>
+</head>
+<style>
+    th{
+        border: 1px solid;
+        height: 50px;
+        background-color: green;
+        color: white;
+    }
+    td{
+        border: 1px solid;
+        text-align: center;
+        vertical-align: center;
+        height: 50px;
+    }
+    tr:hover{
+        background-color: red;
+        color: white;
+    }
+    tr:nth-child(even){
+        background-color: whitesmoke;
+    }
+    table{
+        width: 100%;
+        border: 1px solid;
+        border-collapse: collapse;
+    }
+    
+</style>
+<body>
+    <table>
+        <tr>
+
+            <th>
+                SN
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Course
+            </th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ifeanyi</td>
+            <td>Web Dev</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Joy</td>
+            <td>Mobile Dev</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Barikpe</td>
+            <td>Flutter</td>
+        </tr>
+    </table>
+</body>
+
+</html>

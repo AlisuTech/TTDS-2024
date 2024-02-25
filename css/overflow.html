@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+</head>
+<style>
+    div{
+        width:200px;
+        height: 100px;
+        background-color: red;
+        overflow: hidden;
+    }
+    .div-container{
+        width: 100%;
+        background-color: lightgray;
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: 10px;
+        height: 120px;
+        align-items: center;
+        overflow-x: scroll;
+    }
+    .flex-child{
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
+        background-color: gray;
+    }
+</style>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatibus quisquam vitae ipsa aut libero perferendis, unde accusamus, dolor sunt illo. Ab reprehenderit quae sunt fugiat voluptate. Similique, debitis ducimus.
+    </div>
+    <div class="div-container">
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+    </div>
+</body>
+</html>
