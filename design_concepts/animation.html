@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .animation-class{
+        color: white;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        /* animation-name: first-animation;
+        animation-duration: 3s;
+        animation-delay: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        animation-timing-function:linear; */
+        animation: colour-changes 10s linear 0s infinite normal both;
+    }
+    @keyframes first-animation {
+        from{
+            background-color: red;
+        }
+        to{
+            background-color: blanchedalmond;
+        }
+    }
+    @keyframes rotate {
+        to{
+            rotate: 360deg;
+            transform:translate(100px,20px) ;
+        }
+    }
+    @keyframes colour-changes {
+        0%{
+            background-color: red;
+        }
+        50%{
+            background-color: yellow;
+        }
+        100%{
+            background-color: green;
+        }
+    }
+    /* 10s
+        red - 0s
+        brown -5s
+        slateblue - 10s
+    */
+</style>
+<body>
+    <div class="animation-class">lorem ipsum</div>
+    <input type="range" id="rangeVal" value="100"/>
+    
+</body>
+</html>

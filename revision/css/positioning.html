@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+</head>
+<style>
+    .parent-container{
+        width: 100%;
+        height: 100vh;
+        background-color: lightgray;
+    }
+    .fixed-position{
+        position:fixed;
+        border-radius: 50%;
+        width: 100%;
+        height: 500px;
+        background-color: gray;
+        top:-300px;
+        right: 0%;
+    }
+    .abs-div{
+        width: 80px;
+        height: 80px;
+    }
+    .abs-div-1{
+        background-color: aqua;
+        position: absolute;
+    }
+    .abs-div-2{
+        background-color: pink;
+        position: absolute;
+        height: 120px;
+        width: 120px;
+        opacity: 0.6;
+        margin: 10px;
+    }   
+    .abs-div-3{
+        background-color: blueviolet;
+        margin-top: 40px;
+        height: 120px;
+        width: 120px;
+    }
+</style>
+<body>
+    <div class="parent-container">
+        <!-- <div class="fixed-position"></div> -->
+        <!-- <div class="abs-div abs-div-1"></div> -->
+        <div class="abs-div abs-div-2"></div>
+        <div class="abs-div abs-div-3"></div>
+    </div>
+</body>
+</html>

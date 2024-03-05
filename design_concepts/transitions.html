@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        padding: 20px;
+        background-color: blue;
+        /* transition: background-color 10s; */
+        /* transition: border-radius 2s; */
+        font-size: 15px;
+        /* transition: font-size 5s linear ; */
+    }
+    div:hover{
+        /* background-color: red; */
+        /* border: 5px solid purple; */
+        /* border-radius: 10px; */
+        /* opacity: 0.5; */
+        /* font-size: 30px; */
+    }
+    /* 
+        Transformation
+            1. Translation
+            2. Scaling
+            3. Rotating
+            4. Skew
+    
+    */
+    .translation{
+        transform: translate(200px,200px);
+    }
+    .scaling{
+        width: 100px;
+        height: 50px;
+        transform:scale(1,3);
+    }
+    .rotate{
+        transform: rotate(360deg);
+    }
+    .skew{
+        transform: skew(80deg)
+    }
+</style>
+<body>
+    <!-- 
+        Transition
+     -->
+     <div class="translation">
+        Lorem ipsum dolor sit amet consectetur?
+     </div>
+     <div class="scaling"></div>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <div class="rotate"></div>
+     <br>
+     <div class="skew"></div>
+</body>
+</html>
