@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        transition: background-color 2s linear, transform 2s;
+        /* property-name, duration, effect */
+    }
+    div:hover{
+        background-color: brown;
+        transform: scale(0.5) rotate(45deg) translate(100px,200px) skew(45deg);
+        animation: anime-two 5s infinite 0s;
+    }
+    @keyframes anime-one {
+        from{
+            border-radius: 0px;
+        }
+        to{
+            border-radius: 50%;
+        }
+    }
+    @keyframes anime-two {
+        0%{
+            border-radius: 0px;
+        }
+        50%{
+            border-radius: 30%;
+        }
+        100%{
+            border-radius: 50%;
+        }
+    }
+</style>
+<body>
+    <!-- 
+        Transition - Stylish way of Moving between different CSS
+
+        Transformation - Change the figure or shape of your element (TranslateTransform, RotateTransform,ScaleTransform, SkewTransform, ++MatrixTransform)
+
+        Animation - Design or create artistics motions
+     -->
+     <div></div>
+</body>
+</html>

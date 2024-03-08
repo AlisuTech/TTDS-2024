@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pse-hover {
+        background-color: lightgray;
+        padding: 10px;
+    }
+
+    .pse-hover:hover {
+        background-color: aliceblue;
+    }
+
+    div:first-child {}
+
+    p:first-child {
+        color: blue;
+    }
+
+    p::first-letter {
+        font-size: 30px;
+        font-weight: bold;
+        color: green;
+    }
+
+    .p-tag::first-line {
+        font-weight: bold;
+    }
+
+    .p-tag::selection {
+        color: white;
+        background-color: brown;
+    }
+
+    .p-tag::after {
+        content: ' read more';
+        color: rgb(49, 58, 132);
+        font-weight: bold;
+    }
+
+    .p-tag::before {
+        content: 'TechOrigin Start ';
+        color: rgb(49, 58, 132);
+        font-weight: bold;
+    }
+
+    ::selection {
+        background-color: brown;
+        color: white;
+    }
+
+    :empty {
+        padding: 10px;
+        background-color: red;
+    }
+
+</style>
+
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis autem dolorem fugiat beatae illum non
+            delectus, doloremque incidunt veritatis eveniet asperiores nihil, provident iste officia possimus a nobis
+            eaque repellat!</p>
+        <p></p>
+        <div class="pse-hover">
+            <h1>Header</h1>
+            <p class="p-tag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non at reprehenderit, aliquam
+                maxime libero
+                necessitatibus numquam illum consequuntur quaerat voluptate rerum in sapiente. Tempora, voluptate saepe
+                ad ipsa aspernatur commodi?</p>
+        </div>
+        <div>
+            <h1>Header One</h1>
+            <h3>Header Two</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam quas ut assumenda suscipit
+                asperiores distinctio, sint ducimus, quos quisquam impedit adipisci temporibus vel debitis cumque, harum
+                aliquid odio rerum!</p>
+        </div>
+        <p></p>
+</body>
+
+</html>
