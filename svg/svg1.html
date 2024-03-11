@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        SVG - Scalable Vector Graphics
+
+     -->
+     <svg width="200" height="200" style="background-color: lightgray;">
+        <circle cx="100" cy="100" r="50" fill="red" stroke-width="5" stroke="blue"/>
+        <!-- 
+            cx - starting position on x-axis
+            cy - starting position on y-axis
+            r - radius (how big or how small)
+         -->
+     </svg>
+     <svg width="200" height="200" style="background-color: lightgray;">
+        <rect x="20" y="20" width="160" height="160" rx="20" ry="20"
+         fill="red" stroke-width="5" stroke="blue"/>
+        <!-- 
+            x
+            y
+            width
+            height
+            rx
+            ry
+         -->
+     </svg>
+     <svg width="200" height="200" style="background-color: lightgray;">
+        <polygon points="0,0 200,0 200,200 0,200"
+        fill="red" stroke-width="5" stroke="blue"/>
+     </svg>
+     <svg width="200" height="200" style="background-color: white;">
+        <polygon points="100,100 0,200 200,200"
+        fill="red" stroke-width="2" stroke="white"/>
+        <polygon points="100,100 0,0 200,0"
+        fill="red" stroke-width="2" stroke="white"/>
+        <circle cx="100" cy="100" r="50" fill="red" stroke-width="0" stroke="white"/>
+        <circle cx="100" cy="100" r="10" fill="white" stroke-width="0" stroke="white"/>
+     </svg>
+</body>
+</html>

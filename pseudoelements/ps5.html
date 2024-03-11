@@ -24,11 +24,19 @@
         display: block;
     }
     .menu-container-2{
+        background-color: rgb(34, 33, 33);
+        color: white;
+        padding: 10px;
+        width: fit-content;
         display: none;
     }
-    input[type=checkbox]:checked + .parent-div-two .menu-container-2{
+    .menu-check{
+        display: none;
+    }
+    .menu-check:checked + .parent-div-two .menu-container-2{
         display: block;
     }
+    
 </style>
 <body>
     <div class="parent-div">
@@ -40,9 +48,10 @@
             <p>Open DevTool Pane</p>
         </div>
     </div>
-        <input class="menu-check" type="checkbox"/>
+
+    <input class="menu-check" type="checkbox" id="menu-bar"/>
     <div class="parent-div-two">
-        <i class="bar fa fa-bars"></i>
+        <label for="menu-bar"><i class="bar fa fa-bars"></i></label>
         <br>
         <div class="menu-container-2">
             <p>Open In browser</p>
