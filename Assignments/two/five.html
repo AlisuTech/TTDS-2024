@@ -24,17 +24,18 @@
         background-color: black;
     }
     .input-parent{
-        border: 1px solid black;
+        border: none;
         padding: 5px;
+        background-color: transparent;
     }
 </style>
 <body>
     <div class="parent-comp">
         <div class="child-comp">
-            <table border="1" style="width: 100%;">
-                <tr>
+            <table style="width: 100%;">
+                <tr style="background-color: white;">
                     <td><i class="fa fa-user"></i></td>
-                    <td><input style="width: 90%;" placeholder="Name"/></td>
+                    <td><input class="input-parent" style="width: 90%;" placeholder="Name"/></td>
                 </tr>
                 <tr>
                     <td><i class="fa fa-envelope"></i></td>
