@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0px
+    }
+    .background{
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    /* Mobile Devices */
+    @media (max-width:480px) {
+        .background{
+            background-color: green;
+        }
+    }
+    /* Mini Tablets and IPad */
+    @media (min-width:481px) and (max-width:767px) {
+        .background{
+            background-color: yellow;
+        }
+    }
+    /* Tablets and IPad */
+    @media (min-width:768px) and (max-width:1024px) {
+        .background{
+            background-color: blue;
+        }
+    }
+    /* Laptops and Desktops */
+    @media (min-width:1025px) and (max-width:1280px) {
+        .background{
+            background-color: gold;
+        }
+    }
+    /* Big Screens (Big Laptops and Screens) */
+    @media (min-width:1281px){
+        .background{
+            background-color: purple;
+        }
+    }
+</style>
+<body>
+    <!-- 
+        Responsiveness - The process of ensuring compatibility with different devices
+        1. Having Multiple Styles for different devices
+        2. Toggling HTML based on device styling
+     -->
+     <div class="background">
+        <h1>Hello World</h1>
+     </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        background-color: red;
+    }
+    
+    #element-id{
+
+    }
+    .background-mobile{
+        display: none;
+    }
+    .background-tablet{
+        display: none;
+    }
+    .background-others{
+        
+    }
+    /* Mobile Devices */
+    @media (max-width:767px) {
+        .background-mobile{
+            display: block;
+        } 
+        .background-others{
+            display: none;
+        }  
+    }
+    
+    /* Tablets and IPad */
+    @media (min-width:768px) and (max-width:1024px) {
+        .background-tablet{
+            display: block;
+        }
+        .background-others{
+            display: none;
+        }
+    }
+    /* 
+        Class Based CSS || Element Based CSS || Element Name Based CSS
+    */
+</style>
+<body>
+    <!-- 
+        Responsiveness - The process of ensuring compatibility with different devices
+        1. Having Multiple Styles for different devices
+        2. Toggling HTML based on device styling
+     -->
+     <div id="element-id" class="background-mobile">
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor...</p>
+     </div>
+     <div class="background-tablet">
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quis! Unde voluptate fuga optio velit a quod, amet similique labore. Explicabo minima suscipit, numquam autem eum omnis odio doloremque quos...</p>
+     </div>
+     <div class="background-others">
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quis! Unde voluptate fuga optio velit a quod, amet similique labore. Explicabo minima suscipit, numquam autem eum omnis odio doloremque quos.</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quis! Unde voluptate fuga optio velit a quod, amet similique labore. Explicabo minima suscipit, numquam autem eum omnis odio doloremque quos.</p>
+     </div>
+</body>
+</html>
