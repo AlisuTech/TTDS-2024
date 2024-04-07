@@ -5,6 +5,7 @@ function printOnConsole(){
     // Action Happens here
     console.log("Hello World")
 }
+
 function printOnConsoleTwo(param_one){
     // Action Happens here
     console.log(param_one)
@@ -39,4 +40,22 @@ console.log(percent_profit+"%")
 // Custom Functions - Inbuilt Functions (Connected to variable || Not Connected to Variable)
 // Use Inbuilt Function
 
-//Anonymous Functions - Embedded inside variable or inbuilt function
+//Anonymous Functions - Embedded inside variable or inbuilt function -- Cannot stand alone
+
+let anonymousFunction=function(){
+    // Action Happens here
+    console.log("Hello World")
+    return "Hello, value has been set"
+}
+console.log(anonymousFunction)
+console.log(anonymousFunction())
+
+let annFunc=()=>{
+    return "This is an anonymous function"
+}
+console.log(annFunc())
+
+let annFuncWithParam=(param_1, param_2)=>{
+    return "This is an anonymous function "+param_1+" "+param_2
+}
+console.log(annFuncWithParam(5,10))
