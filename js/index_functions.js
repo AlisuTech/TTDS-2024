@@ -53,9 +53,39 @@ console.log(anonymousFunction())
 let annFunc=()=>{
     return "This is an anonymous function"
 }
+
 console.log(annFunc())
 
 let annFuncWithParam=(param_1, param_2)=>{
     return "This is an anonymous function "+param_1+" "+param_2
 }
 console.log(annFuncWithParam(5,10))
+
+
+// synchronous functions - happens immediately
+// asynchronious functions - happen in the future
+function LogTTDS_Student(name){
+    console.log("====================")
+    console.log(`Hello ${name}`)
+}
+LogTTDS_Student("Joy")
+setTimeout(()=>LogTTDS_Student("Gideon"),3000)// time is in milliseconds 10-3
+setTimeout(LogTTDS_Student,10000)
+console.log("This is the end")
+
+async function asyncFunc(){
+    // Would produce result in the future
+    // Promise - Response JS Async function gives
+    let promise=await jsPromise()
+    console.log(promise*12)
+}
+
+let asyncAnnFunc=async ()=>{
+    // Would produce result in the future
+}
+
+async function jsPromise(){
+    return 4
+}
+asyncFunc()
+console.log("log")

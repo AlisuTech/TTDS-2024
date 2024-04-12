@@ -92,5 +92,101 @@ let array_two_2=[10,25,75,68,93,101,1025]
 let sorted=array_two_2.sort((b,a)=>a-b)
 console.log(sorted)
 
+let slicer=array_two.slice(0,3)
+console.log(slicer)
+
+let slicer2=array_two.slice(1,3)// first parameter - index based // second parameter -Length based
+console.log(slicer2)
+
+let slicer3=array_two.slice(2,3)
+console.log(slicer3)
+
+let slicer4=array_two.slice(3,3)
+console.log(slicer4)
+
+
+let splice=array_two.splice(0,2)
+console.log(splice)
+
+array_two=["Ada","Joy","Esohe","Gideon"]
+splice=array_two.splice(0,1)
+console.log(splice)
+
+
+array_two=["Ada","Joy","Esohe","Gideon"]
+splice=array_two.splice(1,2)
+console.log(splice)
+
+array_two=["Ada","Joy","Esohe","Gideon"]
+splice=array_two.splice(2,2)
+console.log("============")
+console.log(array_two)
+console.log(splice)
+
+//find - search for the first matching item
+//filter - search for every matching item
+const search_item=array_two.find((value)=>{
+    return value=="Joy2"
+});
+console.log(search_item)
+
+array_two=["Ada","Joy","Esohe","Gideon"]
+const search_items=array_two.filter((value)=>{
+    return value.includes("o") && value.includes('e')
+});
+console.log(search_items)
+
+let array_object=[
+    {
+        id:0,
+        name:"TTDS",
+        type:"Software Development"
+    },
+    {
+        id:1,
+        name:"BuildersDeck",
+        type:"Technology Consulting"
+    },
+    {
+        id:2,
+        name:"MyHospitul",
+        type:"Technology Development"
+    },
+    {
+        id:3,
+        name:"BookSeven",
+        type:"Productivity & Utility"
+    }
+]
+
+console.log("============")
+item=array_object.find((predicate)=>{
+    let foundItem=predicate.id==1
+    return foundItem
+})
+console.log(item)
+
+items=array_object.filter((predicate)=>{
+    let foundItem=predicate.id>1
+    return foundItem
+})
+console.log(items)
+console.log("============")
+items=array_object.filter((predicate)=>predicate.id>1)
+console.log(items)
+
+//map - Transform a object by going through all the elements & can return a response
+newArray=array_object.map((_element_)=>{
+    _element_.id+=1
+    return _element_
+})
+console.log(array_object)
+console.log(newArray)
+console.log("============")
+//forEach -  Transform a object by going through all the elements but without response
+array_object.forEach((element)=>{
+    element.id+=1
+})
+console.log(array_object)
 
 
