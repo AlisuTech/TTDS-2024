@@ -89,3 +89,6 @@ async function jsPromise(){
 }
 asyncFunc()
 console.log("log")
+
+
+//open - Open Files in JavaScript
