@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Modelling</title>
+</head>
+<style>
+    .test-class{
+        background-color: blue;
+        font-size: 30px;
+        color: red;
+        width: 300px;
+        height: 300px;
+    }
+</style>
+<body>
+    <!-- 
+        Comm between Javascript and HTML 
+        document - it contains the key functions to communicate between js and html
+
+        Changes or Getting to be made after fetching element
+            1. Content - InnerHTML & InnerText
+            2. Style - Style or Style Field
+            3. Value
+            4. Attribute
+    -->
+    <p id="pe">Hello From Ifeanyi</p>
+    <div id="container">
+    </div>
+    <input id="email" placeholder="email" class="te"/>
+    <button onclick="fetchPe()">Fetch Element Event</button>
+    <button onclick="changepe()">Change Element Event</button>
+    <button onclick="changestyle()">Change Style Event</button>
+    <button onclick="changeValue()">Change Value Event</button>
+    <button onclick="changeAttribute()">Change Attribute Event</button>
+    <button onclick="getElementTags()">Fetch Event</button>
+</body>
+<script>
+    function fetchPe(){
+        let ptag=document.getElementById("pe")// html element - goes to the html body and finds the 'element' with that id
+        console.log(ptag)
+        let emailInput=document.getElementById('email')
+        console.log(emailInput)
+    }
+    
+    function changepe(){
+        let ptag=document.getElementById("pe")// html element - goes to the html body and finds the 'element' with that id
+        ptag.innerText="This is an updated text from JavaScript"
+        let container=document.getElementById("container")
+        container.innerHTML="<p>This is from JS</p><button>Inner button</button>"
+    }
+
+    function changestyle(){
+        let container=document.getElementById('container')
+        container.style="background-color:red;width:100px;height:100px;"
+        container.style.border="3px solid blue"
+    }
+
+    function changeValue(){
+        // Input/TextArea is the only element with value - accepts users feedback
+        let emailInput=document.getElementById("email")
+        emailInput.value="ifeanyi@gmail.com"
+    }
+
+    function changeAttribute(){
+        let container=document.getElementById('container')
+        container.className="test-class"
+    }
+
+    function getElementTags(){
+        let container=document.getElementById('pe')
+        console.log(container.innerHTML)
+        console.log(container.innerText)
+        console.log(container.style)
+        let emailInput=document.getElementById("email")
+        console.log(emailInput.value)
+        console.log(emailInput.className)
+    }
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Management</title>
+    <!-- <script src="../js/index_functions.js"></script> -->
+</head>
+<body>
+    <!-- 
+        Communication between HTML,CSS and JavaScript - DOM (Document Object Modelling)
+
+        HTML to JavaScript => Trigger/Raise Events (onClick - 90%, mouseover, focus, drag, drop, onChange) => To a function
+
+        JavaScript to HTML => Element Id, Class Name, Element Name
+
+
+        // JS Effect - console, alert, html blocks
+     -->
+     <h1>HTML Triggers</h1>
+     <div onmouseenter="mouseEnterEvent()" style="background-color: red;color: white;">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae totam voluptate dolorum atque illo ex exercitationem dolore magni accusantium reiciendis quam eos, suscipit ut mollitia id dignissimos sed? At, provident!</p>
+     </div>
+     <div style="background-color: whitesmoke;width: 100px; height: 100px;"
+          ondrop="onDropAction()">
+
+
+     </div>
+     <input onchange="onkeydown()"/>
+     <button onclick="handleEvent()">Show Alert</button>
+     <button onclick="addParams(200,200,100)">Add Params</button>
+</body>
+<script>
+    console.log("User visited our page")
+    function handleEvent(){
+        console.log("Event from HTML")
+    }
+    function mouseEnterEvent(){
+        console.log("Mouse entered Div Item")
+    }
+    function onDropAction(){
+        console.log("Item was dropped")
+    }
+</script>
+</html>

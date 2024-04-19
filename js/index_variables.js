@@ -20,6 +20,7 @@
 // 4. Objects  - All Data - JSON (Javascript Object Notation)
 // 5. Null     - Nothing/None of 1-4
 // 6. Undefined - The container has not been set
+// 7. HTML Element 
 
 // Naming
 // - lowercase
