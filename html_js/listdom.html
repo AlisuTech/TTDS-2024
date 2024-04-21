@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Dom Modelling</title>
+</head>
+<style>
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 300px;
+        border: 2px blue solid;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .color-img {
+        background-color: blue;
+        width: 300px;
+        height: 300px;
+    }
+</style>
+
+<body>
+    <input id="search" style="width: 320px;height: 30px; margin: 10px;" placeholder="search keyword" onchange="searchList()"/>
+    <br>
+    <br>
+    <div id="container"></div>
+    <button id="alert">Show Alert</button>
+</body>
+<script>
+    let buttonElement=document.getElementById("alert")
+    buttonElement.addEventListener("click",()=>alert("Hello from TechOrigin"))
+    let posts = [
+        {
+            name:"Ifeanyi Nwachukwu",
+            dateTime: new Date(),
+            post:"hello from MyHospitul"
+        },
+        {
+            name:"Joy Chidinma",
+            dateTime: new Date(2004,3,20),
+            post:"Joy the Senior Dev"
+        },
+        {
+            name:"Gideon Edo",
+            dateTime: new Date(1987,5,30),
+            post:"Gideon the Consultant"
+        },
+        {
+            name:"Barikpe Lekpezorn",
+            dateTime: new Date(2001,4,20),
+            post:"Dev Expert"
+        },
+        {
+            name:"Jossy Nzeata",
+            dateTime: new Date(2001,5,20),
+            post:"Dev Knight"
+        },
+        {
+            name:"Esther",
+            dateTime: new Date(2001,5,20),
+            post:"Dev Knight"
+        }
+    ]
+    let container=document.getElementById('container')
+    let init=1
+    posts.map((item)=>{
+        container.innerHTML+=`<div class="flex-column"> <div class="flex-row"> <div class="circle">${getAcronyms(item.name)}</div> <div> <p>${item.name}</p> <p>${item.dateTime.toDateString()}</p> </div> </div> <div> <p>${item.post}</p> <div></div> </div> </div>`
+    })
+    function getAcronyms(name){
+        let splitted=name.split(" ")
+        if(splitted.length>=2){
+            return (splitted[0][0]+splitted[1][0]).toUpperCase()
+        }
+        else{
+            return splitted[0][0].toUpperCase()
+        }
+    }
+    function searchList(){
+        keyword=document.getElementById('search').value
+        container.innerHTML=""
+        let filterList=posts.filter(x=>x.name.toLowerCase().includes(keyword.toLowerCase()) || x.post.toLowerCase().includes(keyword.toLowerCase()))
+        filterList.map((item)=>{
+            container.innerHTML+=`<div class="flex-column"> <div class="flex-row"> <div class="circle">${getAcronyms(item.name)}</div> <div> <p>${item.name}</p> <p>${item.dateTime.toDateString()}</p> </div> </div> <div> <p>${item.post}</p> <div></div> </div> </div>`
+        })
+    }
+</script>
+
+</html>
