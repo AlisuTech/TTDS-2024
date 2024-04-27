@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'; 
+// All React tools to help develop a React based application
+import ReactDOM from 'react-dom/client'; 
+// The tools needed to interact between reactjs and native web dev (HTML, CSS & JS)
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Header from './header'
+import Body from './body';
+import Footer from './footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+<React.StrictMode>
+  <div>
+    <Header></Header>
+    <Body></Body>
+    <Footer></Footer>
+  </div>
+</React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Function - JSX
+// Why JS
+// 1. Componentization (Component Based Architecture) 
+      //1b one component with different dynamic features
+// 2. Routing & Navigation
+// 3. State Management
