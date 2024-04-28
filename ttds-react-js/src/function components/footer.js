@@ -1,4 +1,4 @@
-import './generic.css'
+import '../generic.css'
 const Footer = () => {
     return (
       <div>
