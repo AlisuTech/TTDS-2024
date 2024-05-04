@@ -1,24 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import MappingComponent from "./mapping_component";
-
-let cars=["Toyota", "Tesla","BYD","Lexus","Mercedes Benz","Chevrolet"]
-
+import FormsMain from "./forms components/forms_main";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <div>
-      <MappingComponent></MappingComponent>
-      {cars.map((item) => <p>{item}</p>)}
-========
-      {cars.map((item) => {
-        return (<p>{item}</p>)
-      })}
-
+      <FormsMain></FormsMain>
     </div>
   </React.StrictMode>
 );
-
-//Mapping Components - Arrays or List

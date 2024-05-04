@@ -5,7 +5,11 @@ const MappingComponent = () => {
     let array_object=[
         {
             name:"Gideon Edoghotu",
-            rank: "Fullstack Web Dev"
+            rank: "Fullstack Web Dev",
+            others:{
+                sn:1,
+                name:"ooo"
+            }
         },
         {
             name:"Josephat Nzeata",
@@ -20,6 +24,7 @@ const MappingComponent = () => {
             rank: "Product Manager"
         }
     ]
+    // array_object[0].others.name
     const broadCast=(name)=>{
         alert(`Hello ${name}`)
     }
