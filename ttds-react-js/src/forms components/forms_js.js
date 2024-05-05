@@ -23,7 +23,7 @@ function signup(fullname, email, password) {
 }
 function login(email, password) {
   let user = users.find(
-    (item) => item.email == email && item.password == password
+    (item) => item.email === email && item.password === password
   );
   if (user == null) {
     alert("Invalid User Authentication");

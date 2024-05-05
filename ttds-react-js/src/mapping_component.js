@@ -1,5 +1,6 @@
 import React from 'react';
 import Buttoncomp from './react components/buttoncomp';
+import { Link } from 'react-router-dom';
 
 const MappingComponent = () => {
     let array_object=[
@@ -44,6 +45,7 @@ const MappingComponent = () => {
                     <Buttoncomp header={array.name} subcontent={array.rank}funcHandler={()=>broadCast(array.name)}></Buttoncomp>
                 )
             })}
+
         </div>
     );
 }
