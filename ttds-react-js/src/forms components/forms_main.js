@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import * as Auth from "./forms_js"
+import store from "../services/store";
 // import img_one from "../assets/img1.jpg"
 
 const FormsMain = () => {
@@ -10,9 +11,11 @@ const FormsMain = () => {
     // const fullnameChange=""
     // const emailChange=""
     // const passwordChange=""
+    const [loginNote,loginNoteChanged]=useState('This is a note')
     const [fullname,fullnameChange]=useState('')
     const [email,emailChange]=useState('')
     const [password,passwordChange]=useState('')
+    const [showLoader, showLoaderChanged]=useState(false)
     // Manage Changes - useState()
 
     //Login
@@ -20,6 +23,27 @@ const FormsMain = () => {
     const [loginDetails,loginDetailsChanged]=useState()
     const updateChangesHandler=(e)=>{
         loginDetailsChanged({...loginDetails,[e.target.name]:e.target.value})
+    }
+    const SendNoteAction=()=>{
+      store.dispatch({
+        type:"LoginNote"
+      })
+    }
+    //It is called everytime there is a change in the reducer
+    store.subscribe(()=>{
+      var currentChanges=store.getState()
+      loginNoteChanged(currentChanges.loginNote)
+      showLoaderChanged(currentChanges.isLoadingApp)
+    })
+    const loginEvent=()=>{
+      store.dispatch({
+        type:"loadingPage"
+      })
+      setTimeout(()=>{
+        store.dispatch({
+        type:"stopLoadingPage"
+      })
+      },3000)
     }
   return (
     <div>
@@ -44,6 +68,7 @@ const FormsMain = () => {
         <br></br>
         <br></br>
         <button onClick={()=>Auth.signup(fullname,email,password)}>Sign Up</button>
+        <button onClick={()=>SendNoteAction()}>Send Note to Login</button>
         <br></br>
         <br></br>
         <p id="result1">-----Result------</p>
@@ -72,10 +97,12 @@ const FormsMain = () => {
         <br></br>
         <br></br>
         <button onClick={()=>alert(loginDetails.Email)}>Login</button>
+        <button onClick={()=>loginEvent()}>Login Event</button>
         <br></br>
         <br></br>
-        <p id="result2">-----Result------</p>
+        <p id="result2">{loginNote}</p>
       </div>
+      {showLoader?<p className="loading-tag">Loading...</p>:""}
     </div>
   );
 };

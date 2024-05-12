@@ -33,3 +33,18 @@ root.render(
 // Root Domain - Base URL - localhost:3000
 // home - /home
 // signup - /signup
+
+// ReactJS - Redux
+// State Management
+// 1. Observes a change and performs an action based on the change
+// 2. Move information from one page to another
+// 3. Store information over the app run life time 
+// E.g Loader, Authentication persistence
+
+// Redux Steps
+// 1. Create a Store (State Store - localStorage)
+// 2. Create a Reducer (Receives and Dispatches Information/Events)
+// 3. Publish an Event or Change
+// 4. Subscribe to Event or Change
+
+// WF: Publish Event >> Reducer, receives and Dispatches >> Subscriber Receives the event and acts on it >> All process are stored in the store

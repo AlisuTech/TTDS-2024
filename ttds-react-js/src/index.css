@@ -51,3 +51,11 @@ code {
 .imgone{
   width: 100px;
 }
+.loading-tag{
+  background-color: blanchedalmond;
+  padding: 10px;
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
