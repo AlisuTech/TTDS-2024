@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from "react";
 import * as Auth from "./forms_js"
 import store from "../services/store";
+import ChildContextOne from "./child_context_one";
 // import img_one from "../assets/img1.jpg"
 
 const FormsMain = () => {
@@ -20,7 +21,11 @@ const FormsMain = () => {
 
     //Login
     // loginDetails - email & password
-    const [loginDetails,loginDetailsChanged]=useState()
+    const [loginDetails,loginDetailsChanged]=useState({
+      fullname:"",
+      email:"",
+      password:""
+    })
     const updateChangesHandler=(e)=>{
         loginDetailsChanged({...loginDetails,[e.target.name]:e.target.value})
     }

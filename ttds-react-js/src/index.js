@@ -6,6 +6,8 @@ import { BrowserRouter,Routes,Route, Link } from "react-router-dom";
 import MappingComponent from "./mapping_component";
 import MenuHeader from "./forms components/menu_header";
 import RouteParam from "./forms components/route_param";
+import StateComp from "./forms components/state_comp";
+import ContextComp from "./forms components/context_comp";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,6 +17,8 @@ root.render(
         <MenuHeader></MenuHeader>
         <Routes>
           <Route path="/" element={<FormsMain></FormsMain>}></Route>
+          <Route path="/context" element={<ContextComp></ContextComp>}></Route>
+          <Route path="/state" element={<StateComp></StateComp>}></Route>
           <Route path="/hm" element={<FormsMain></FormsMain>}></Route>
           <Route path="/home" element={<MappingComponent/>}></Route>
           <Route path="/home/page" element={<MappingComponent/>}></Route>
