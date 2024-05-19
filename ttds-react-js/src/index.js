@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.css";
+import "./styles/custom.scss";
 import "./index.css";
 import FormsMain from "./forms components/forms_main";
 import { BrowserRouter,Routes,Route, Link } from "react-router-dom";
@@ -8,6 +10,8 @@ import MenuHeader from "./forms components/menu_header";
 import RouteParam from "./forms components/route_param";
 import StateComp from "./forms components/state_comp";
 import ContextComp from "./forms components/context_comp";
+import ContextUseEffect from "./forms components/context_use_effect";
+import ReactBootstrap from "./bootstrap/react_bootstrap";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,9 +21,11 @@ root.render(
         <MenuHeader></MenuHeader>
         <Routes>
           <Route path="/" element={<FormsMain></FormsMain>}></Route>
+          <Route path="/bts" element={<ReactBootstrap></ReactBootstrap>}></Route>
           <Route path="/context" element={<ContextComp></ContextComp>}></Route>
           <Route path="/state" element={<StateComp></StateComp>}></Route>
           <Route path="/hm" element={<FormsMain></FormsMain>}></Route>
+          <Route path="/effect" element={<ContextUseEffect></ContextUseEffect>}></Route>
           <Route path="/home" element={<MappingComponent/>}></Route>
           <Route path="/home/page" element={<MappingComponent/>}></Route>
           <Route path="/param/:message" element={<RouteParam></RouteParam>}></Route>

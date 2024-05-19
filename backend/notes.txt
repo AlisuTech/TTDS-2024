@@ -1,0 +1,40 @@
+Backend Development in MERN Stack
+
+Another Javascript blocks of code
+
+It is hosted in a different container but secured
+
+>> Gains access security (2FAs)
+>> Insecured Backend Web App
+>> Infiltering Hosting Provider (very hard)
+
+>> SQL Injection
+
+ORM - Object Relational Mapper - convert objects to SQL (slow)
+
+>> BREAK Authentication 
+
+>> Tokenization
+
+LEARNINGS
+
+>> Requests and Responses - (Endpoint/API Management)
+API - Application Programming Interface
+Interface between FE & BE
+Interface between BE & BE
+
+>> API - www.google.com => FE
+
+>> http => https 
+
+>> Middlewares {Authentication and Authorization}
+
+>> Database 60%
+>> Communication 
+>> Files
+
+>> MERN (NodeJS - npm (Node Package Manager))
+
+
+
+
