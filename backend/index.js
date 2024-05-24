@@ -2,6 +2,7 @@ const express=require('express')
 // import express from 'express'
 const securedRouter=require("./routers/secured_endpoints.js")
 const authorizationRouter=require("./routers/authorization.js")
+const databaseRouter=require("./routers/database_entry.js")
 
 const PORT_NUMBER=5050
 const app=express()
@@ -21,6 +22,7 @@ app.use((req,res,next)=>{
 
 app.use("/secured",securedRouter)
 app.use("/auth",authorizationRouter)
+app.use("/database",databaseRouter)
 
 // Requests and Responses
 // >> Types of Requests in Backend "Get, Post, Put, Delete"
