@@ -1,10 +1,12 @@
 const express=require('express')
+const dotenv=require('dotenv')
+dotenv.config()
 // import express from 'express'
 const securedRouter=require("./routers/secured_endpoints.js")
 const authorizationRouter=require("./routers/authorization.js")
 const databaseRouter=require("./routers/database_entry.js")
 
-const PORT_NUMBER=5050
+const PORT_NUMBER=process.env.PORTNUMBER
 const app=express()
 app.use(express.json());
 

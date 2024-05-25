@@ -2,13 +2,25 @@ const express=require('express')
 const mongoose=require('mongoose')
 const {v4}=require('uuid')
 const router=express.Router()
-const connString="mongodb+srv://davpms23:DavPMS2023@cluster0.9mdwzzv.mongodb.net/TTDS"
+const connString=process.env.DBCONNSTRING
 
 //Steps to DB Creation
 // Connecting the Database - mongoose
 // Creating the Model - Schema & Table
 // Syncing your process - CRUD (Create, Read, Update, Delete)
 // Cluster >> Databases >> Collection (Table) >> Schemas
+
+//Reasons not to keep sensitive info in code
+//1. Everybody has access
+//2. Deploy Safe Place, Easily Changed without redeploying
+
+//Setting Up Environment Variables
+//1. Install dotenv
+//2. Configure your App (ExpressJS/ReactJS)
+//3. Create Variable Container>>
+//4. Call your process variable
+
+
 mongoose.connect(connString)
 mongoose.set('strictQuery', true);
 const userSchema=new mongoose.Schema({
@@ -31,7 +43,8 @@ router.post('/create-user',async (req,res)=>{
         uid:v4(),
         firstName:body.firstName,
         lastName:body.lastName,
-        email:body.email
+        email:body.email,
+        password:body.password
     }
     await userCollection.create(model)
     res.send("Created Successfully")
@@ -63,6 +76,17 @@ router.get('/fetch-user-byemail',async (req,res)=>{
     //x=>x.email==email
     const user=await userCollection.findOne({"email":em})
     res.send(user)
+})
+router.get('/login',async (req,res)=>{
+    const {em,ps}=req.query
+    const user=await userCollection.findOne({$and:[{"email":em},{password:ps}]})
+    if(user!=null){
+        res.send(user)
+    }
+    else{
+        res.status(400)// 404, 501, 200, 201, 400
+        res.send(null)
+    }
 })
 router.get('/fetch-users',async (req,res)=>{
     // Find - Many Items that satifies a condtion
